@@ -1,1 +1,97 @@
-<html><body>WIP</body></html>
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="index.css">
+	</head>
+	<body id="body">
+		<img src="title.png" class="center-img">
+		<p></p>
+		<img id="main_img" class="main_img" src="img/win1.png">
+		<p></p>
+
+		<table class="center">
+			<tbody id="tab_main">
+				<tr>
+					<th>OS/GUI</th>
+					<th>Version</th>
+					<th>Company</th>
+					<th>Release Date</th>
+				</tr>
+				<tr>
+					<td id="cell_1">
+						<div class="search-wrapper">
+							<div class="search-input" id="search">
+								<input type="text" placeholder="Type to guess" id="searchInput">
+								<div id="suggestions">
+									<button type="button" class="button" onclick="check_select('OS/2')">OS/2</button>
+									<button type="button" class="button" onclick="check_select('Windows')">Windows</button>
+									<button type="button" class="button" onclick="check_select('macOS')">macOS</button>
+								</div>
+								<div class="search-icon"><i class="fas fa-search"></i></div>
+							</div>
+						</div>
+						<text id="search_cell"></text>
+					</td>
+					<td id="version_cell">
+						<div class="search-wrapper"  id="version_windows">
+							<div class="search-input">
+								<input type="text" placeholder="Type to guess" id="searchInput_win">
+								<div id="suggestions_win">
+									<button type="button" class="button" onclick="check_select_win('1.0')">1.0</button>
+									<button type="button" class="button" onclick="check_select_win('2.0')">2.0</button>
+									<button type="button" class="button" onclick="check_select_win('3.0')">3.0</button>
+									<button type="button" class="button" onclick="check_select_win('3.1')">3.1</button>
+									<button type="button" class="button" onclick="check_select_win('95')">95</button>
+									<button type="button" class="button" onclick="check_select_win('98')">98</button>
+									<button type="button" class="button" onclick="check_select_win('Me')">Me</button>
+									<button type="button" class="button" onclick="check_select_win('XP')">XP</button>
+									<button type="button" class="button" onclick="check_select_win('Vista')">Vista</button>
+									<button type="button" class="button" onclick="check_select_win('7')">7</button>
+									<button type="button" class="button" onclick="check_select_win('8')">8</button>
+									<button type="button" class="button" onclick="check_select_win('10')">10</button>
+									<button type="button" class="button" onclick="check_select_win('11')">11</button>
+								</div>
+								<div class="search-icon"><i class="fas fa-search"></i></div>
+							</div>
+						</div>
+						<div class="search-wrapper"  id="version_macos">
+							<div class="search-input">
+								<input type="text" placeholder="Type to guess" id="searchInput_mac">
+								<div id="suggestions_mac">
+									<button type="button" class="button" onclick="check_select_mac('System 1')">System 1</button>
+									<button type="button" class="button" onclick="check_select_mac('System 3')">System 3</button>
+									<button type="button" class="button" onclick="check_select_mac('System 4')">System 4</button>
+									<button type="button" class="button" onclick="check_select_mac('System 7')">System 7</button>
+									<button type="button" class="button" onclick="check_select_mac('8')">8</button>
+									<button type="button" class="button" onclick="check_select_mac('9')">9</button>
+									<button type="button" class="button" onclick="check_select_mac('X 10.0 Cheetah')">X 10.0 Cheetah</button>
+									<button type="button" class="button" onclick="check_select_mac('X 10.2 Jaguar')">X 10.2 Jaguar</button>
+									<button type="button" class="button" onclick="check_select_mac('X 10.3 Panther')">X 10.3 Panther</button>
+									<button type="button" class="button" onclick="check_select_mac('X 10.4 Tiger')">X 10.4 Tiger</button>
+									<button type="button" class="button" onclick="check_select_mac('X 10.5 Leopard')">X 10.5 Leopard</button>
+								</div>
+								<div class="search-icon"><i class="fas fa-search"></i></div>
+							</div>
+						</div>
+						<div class="search-wrapper"  id="version_os2">
+							<div class="search-input">
+								<input type="text" placeholder="Type to guess" id="searchInput_os2">
+								<div id="suggestions_os2">
+									<button type="button" class="button" onclick="check_select_os2('1.3')">1.3</button>
+									<button type="button" class="button" onclick="check_select_os2('2.0')">2.0</button>
+									<button type="button" class="button" onclick="check_select_os2('Warp 3')">Warp 3</button>
+									<button type="button" class="button" onclick="check_select_os2('Warp 4')">Warp 4</button>
+								</div>
+								<div class="search-icon"><i class="fas fa-search"></i></div>
+							</div>
+						</div>
+						<text id="version"></text>
+					</td>
+					<td id="company"></td>
+					<td id="date"></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+	<script src="index.js"></script>
+</html>
