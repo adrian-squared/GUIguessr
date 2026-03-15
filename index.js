@@ -50,11 +50,38 @@ document.getElementById("version_macos").style.display = 'none';
 document.getElementById("version_os2").style.display = 'none';
 
 document.getElementById("body").style.backgroundImage = "url('themes/" + theme + "/bg.png')";
-// if (theme == "win1") {
-//     document.getElementById("body").style.backgroundImage = "url('themes/win1/bg.png')";
-// } else if (theme == "win2") {
-//     document.getElementById("body").style.backgroundImage = "url('themes/win2/bg.png')";
-// }
+
+if (theme == "win1" || theme == "win2") {
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+    all[i].style.fontFamily = "Fixedsys";
+    }
+}else if (theme == "win3") {
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+    all[i].style.fontFamily = "System";
+    }
+}else if (theme == "win95" || theme == "winme") {
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+    all[i].style.fontFamily = "W95FA";
+    }
+}else if (theme == "macos1" || theme == "macos7") {
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+    all[i].style.fontFamily = "Chicago";
+    }
+}else if (theme == "macos8" || theme == "macos9") {
+    var all = document.getElementsByTagName("*");
+
+    for (var i=0, max=all.length; i < max; i++) {
+    all[i].style.fontFamily = "Charcoal";
+    }
+}
 
 document.getElementById("main_img").setAttribute('src', 'img/' + main_img + '.png');
 

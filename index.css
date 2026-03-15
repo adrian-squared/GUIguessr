@@ -1,13 +1,21 @@
 @font-face {
   font-family: Fixedsys;
   src: url(fonts/fixedsys-excelsior.ttf);
+}@font-face {
+  font-family: System;
+  src: url(fonts/System.woff2);
+}@font-face {
+  font-family: W95FA;
+  src: url(fonts/w95fa.woff2);
+}@font-face {
+  font-family: Chicago;
+  src: url(fonts/chicago.ttf);
+}@font-face {
+  font-family: Charcoal;
+  src: url(fonts/charcoal.woff2);
 }
 body {
 	background-image: url('themes/win1/bg.png');
-}
-
-*{
-  font-family: Fixedsys;
 }
 
 .center {
