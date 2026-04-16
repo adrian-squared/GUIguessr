@@ -124,3 +124,34 @@ color: rgb(146, 146, 146);
   font-size: 16px;
   cursor: pointer;
 }
+
+.center_text {
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+.end_button {
+margin: 0;
+position: absolute;
+top: 80%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+}
+
+#conglaturations {
+display: none;
+margin: 0;
+position: absolute;
+top: 50%;
+left: 50%;
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+background-color: #fff;
+width: 500px;
+height: 100px;
+}
