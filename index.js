@@ -1,14 +1,16 @@
 const themes = ["win1", "win2", "win3", "win95", "winme","macos1", "macos7", "macos8", "macos9"];
-const os_array = ["Windows", "macOS","OS/2"]
+
+const os_array = ["Windows", "macOS","OS/2"];
+
 const imgs_win = ["win1","win2", "win3", "win31", "win95", "win98", "winme", "winxp", "winvista", "win7", "win8", "win10", "win11"];
-const vers_win = ["1.0","2.0","3.0","3.1","95","98","Me","XP","Vista","7","8","10","11"]
-const date_win = [1985, 1987, 1990, 1992, 1995, 1998, 2000, 2001, 2007, 2009, 2012, 2015, 2021]
+const vers_win = ["1.0","2.0","3.0","3.1","95","98","Me","XP","Vista","7","8","10","11"];
+const date_win = [1985, 1987, 1990, 1992, 1995, 1998, 2000, 2001, 2007, 2009, 2012, 2015, 2021];
 const imgs_mac = ["macos1","macos3", "macos4", "macos7", "macos8", "macos9", "macosx", "macosx2", "macosx3", "macosx4", "macosx5"];
-const vers_mac = ["System 1","System 3","System 4","System 7","8","9","X 10.0 Cheetah","X 10.2 Jaguar","X 10.3 Panther","X 10.4 Tiger","X 10.5 Leopard"]
-const date_mac = [1984, 1986, 1987, 1991, 1997, 1999, 2001, 2002, 2003, 2005, 2007]
+const vers_mac = ["System 1","System 3","System 4","System 7","8","9","X 10.0 Cheetah","X 10.2 Jaguar","X 10.3 Panther","X 10.4 Tiger","X 10.5 Leopard"];
+const date_mac = [1984, 1986, 1987, 1991, 1997, 1999, 2001, 2002, 2003, 2005, 2007];
 const imgs_os2 = ["os213","os22", "os2w3", "os2w4"];
-const vers_os2 = ["1.3","2.0","Warp 3","Warp 4"]
-const date_os2 = [1990, 1992, 1994, 1996]
+const vers_os2 = ["1.3","2.0","Warp 3","Warp 4"];
+const date_os2 = [1990, 1992, 1994, 1996];
 
 var row = 1
 
@@ -214,24 +216,30 @@ function hide() {
 }
 
 function check_answer() {
+    var os_check = false
+    var ver_check = false
     if (document.getElementById("gui2").innerHTML == os_array[os_id]) {
         document.getElementById("gui2").style.color = "#ffffff";
         document.getElementById("gui2").style.backgroundColor = "#538d4e";
+        os_check = true
     }
     if (os_array[os_id] == "Windows") {
         if (document.getElementById("version2").innerHTML == vers_win[img_id]) {
             document.getElementById("version2").style.color = "#ffffff";
             document.getElementById("version2").style.backgroundColor = "#538d4e";
+            ver_check = true
         }
     } else if (os_array[os_id] == "macOS") {
         if (document.getElementById("version2").innerHTML == vers_mac[img_id]) {
             document.getElementById("version2").style.color = "#ffffff";
             document.getElementById("version2").style.backgroundColor = "#538d4e";
+            ver_check = true
         }
     } else if (os_array[os_id] == "OS/2") {
         if (document.getElementById("version2").innerHTML == vers_os2[img_id]) {
             document.getElementById("version2").style.color = "#ffffff";
             document.getElementById("version2").style.backgroundColor = "#538d4e";
+            ver_check = true
         }
     }
     if (document.getElementById("company2").innerHTML == company) {
@@ -246,6 +254,23 @@ function check_answer() {
     } else {
         document.getElementById("date2").innerHTML = document.getElementById("date2").innerHTML + "↑";
     }
+    if (os_check && ver_check) {
+        //document.getElementById("date2").innerHTML = "test"
+        //location.reload();
+        document.getElementById("search").style.display = 'none';
+        check_answer_row1()
+        document.getElementById("table_test").deleteRow(1);
+        document.getElementById("conglaturations").style.display = "block";
+        if (row == 2) {
+            document.getElementById("end_text").innerHTML = "Congratulations!!!<br>You found it in 1 try!!!";
+        } else {
+            document.getElementById("end_text").innerHTML = "Congratulations!!!<br>You found it in " + (row-1) + " tries!!!";
+        }
+    }
+}
+
+function reload() {
+    location.reload();
 }
 
 function check_answer_row1() {
